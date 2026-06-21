@@ -88,3 +88,36 @@ Personal and Commercial Use.
 ## Author
 
 DROPPI Marketplace Template
+## Screenshots
+
+### Home Page
+
+![Home](assets/screenshots/home.png)
+
+### Shop Page
+
+![Shop](assets/screenshots/shop.png)
+
+### Product Page
+
+![Product](assets/screenshots/product.png)
+
+### Cart
+
+![Cart](assets/screenshots/cart.png)
+
+### Checkout
+
+![Checkout](assets/screenshots/checkout.png)
+
+### Wishlist
+
+![Wishlist](assets/screenshots/wishlist.png)
+
+### Orders
+
+![Orders](assets/screenshots/orders.png)
+
+### Admin Dashboard
+
+![Admin](assets/screenshots/admin.png)
