@@ -1,30 +1,90 @@
-# Droppi — Premium Fashion Marketplace Template
+# DROPPI – Premium Fashion Marketplace Template
 
-Next.js + Tailwind CSS fashion marketplace template.
+Modern multi-brand fashion marketplace built with Next.js, Firebase, Tailwind CSS and Vercel.
 
-## How to run
-1. Extract ZIP
-2. Open this folder in VS Code
-3. Open terminal
-4. Run:
+## Live Demo
+
+Add your Vercel URL here.
+
+## Features
+
+* Modern Marketplace UI
+* Product Listing & Search
+* Category Filters
+* Brand Filters
+* Product Details Page
+* Product Reviews & Ratings
+* Wishlist System
+* Shopping Cart
+* Coupon System
+* User Authentication
+* Checkout Flow
+* Order Tracking
+* Customer Account Dashboard
+* Admin Dashboard
+* Sales Analytics
+* Inventory Management
+* Low Stock Alerts
+* Responsive Mobile Design
+* Firebase Backend
+* Vercel Deployment Ready
+
+## Tech Stack
+
+* Next.js 14
+* React 18
+* Firebase
+* Tailwind CSS
+* Vercel
+
+## Installation
+
+### Clone Repository
 
 ```bash
-npm.cmd install
-npm.cmd run dev
+git clone YOUR_REPOSITORY_URL
 ```
 
-Open Chrome: http://localhost:3000
+### Install Dependencies
 
-## Pages
-- Home
-- Shop
-- Product page
-- Cart
-- Checkout
-- Account
-- Admin Dashboard
+```bash
+npm install
+```
 
-## Customize
-- Products: `data/products.js`
-- Logo: `public/images/droppi-logo.jpeg`
-- Colors: `tailwind.config.js` and `app/globals.css`
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+## Included Pages
+
+* Home
+* Shop
+* Product Details
+* Wishlist
+* Cart
+* Checkout
+* Login
+* Account
+* Orders
+* Admin Dashboard
+* Admin Orders
+
+## Deployment
+
+This project is fully compatible with Vercel deployment.
+
+## License
+
+Personal and Commercial Use.
+
+## Author
+
+DROPPI Marketplace Template
