@@ -1,22 +1,32 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ShoppingBag, Heart, User, Search } from "lucide-react";
+import {
+  ShoppingBag,
+  Heart,
+  User,
+  Search,
+  Menu,
+  X,
+} from "lucide-react";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-3">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 md:px-6 py-4">
+        <Link href="/" className="flex items-center gap-2 md:gap-3">
           <Image
             src="/images/droppi-logo.jpeg"
             alt="Droppi logo"
-            width={45}
-            height={45}
+            width={40}
+            height={40}
             className="rounded-full"
           />
-          <span className="text-2xl font-black tracking-widest">
+          <span className="text-xl md:text-2xl font-black tracking-widest">
             DROPPI
           </span>
         </Link>
@@ -34,15 +44,90 @@ export default function Navbar() {
           <Link href="/admin-orders">Admin Orders</Link>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <Search size={22} />
-          <Heart size={22} />
+          <Link href="/wishlist">
+            <Heart size={22} />
+          </Link>
           <Link href="/cart">
             <ShoppingBag size={22} />
           </Link>
-          <User size={22} />
+          <Link href="/account">
+            <User size={22} />
+          </Link>
         </div>
+
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden"
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
       </nav>
+
+      {menuOpen && (
+        <div className="md:hidden bg-white border-t px-6 py-6 space-y-4 font-medium">
+          <Link onClick={() => setMenuOpen(false)} href="/" className="block">
+            Home
+          </Link>
+
+          <Link onClick={() => setMenuOpen(false)} href="/shop" className="block">
+            Shop
+          </Link>
+
+          <Link
+            onClick={() => setMenuOpen(false)}
+            href="/product/nike-air-max"
+            className="block"
+          >
+            Products
+          </Link>
+
+          <Link
+            onClick={() => setMenuOpen(false)}
+            href="/wishlist"
+            className="block"
+          >
+            Wishlist
+          </Link>
+
+          <Link
+            onClick={() => setMenuOpen(false)}
+            href="/orders"
+            className="block"
+          >
+            Orders
+          </Link>
+
+          <Link onClick={() => setMenuOpen(false)} href="/cart" className="block">
+            Cart
+          </Link>
+
+          <Link onClick={() => setMenuOpen(false)} href="/login" className="block">
+            Login
+          </Link>
+
+          <Link
+            onClick={() => setMenuOpen(false)}
+            href="/account"
+            className="block"
+          >
+            Account
+          </Link>
+
+          <Link onClick={() => setMenuOpen(false)} href="/admin" className="block">
+            Admin
+          </Link>
+
+          <Link
+            onClick={() => setMenuOpen(false)}
+            href="/admin-orders"
+            className="block"
+          >
+            Admin Orders
+          </Link>
+        </div>
+      )}
     </header>
   );
 }
